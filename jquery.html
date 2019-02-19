@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css2/bootstrap.min.css">
+    <title>Jquery</title>
+   
+    <script type="text/javascript">
+        function mostrar(){
+            document.getElementById('cajas').style.display= "flex";
+        }
+        function ocultar(){
+            document.getElementById('cajas').style.display= "none";
+        }
+    
+    </script>
+</head>
+
+<body style="height: 100vh;" class="d-flex align-items-center">
+   
+    <div class="container" style="align-items: center;">
+        <div id='cajas' class="text-center" style="display: flex; justify-content: center;">
+            <section class="p-4 mb-2 bg-primary text-white mx-2 " style="width: 100px; height: 20px;">Azul</section>
+            <section class="p-4 mb-2 bg-danger text-white mx-2" style="width: 100px; height: 20px;">Rojo</section>
+            <input  class=" mb-2 bg-light text-dark mx-2 my-2" type="submit" value='ocultar' style="width: 100px; height: 30px;" onclick="ocultar()"/>
+        </div>
+
+        <br/>
+        
+    <div class="text-center">
+        <input type="submit" value='mostrar' onclick="mostrar()"/>
+        <input type="submit" value="toggle" onclick="toggle()"/>
+    </div>
+
+        <br/>
+        <div>
+            <section id ='test' class="p-4 mb-2 bg-success text-white text-center" style="height: 300px;" onclick="toogle()">verde</section>
+            <script>
+                var toggled = false;
+                function toggle(){
+                    if(!toggled){
+                        toggled = true;
+                        document.getElementById('test').style.display = "none";
+                        return;
+                    }
+                    if(toggled){
+                        toggled = false;
+                        document.getElementById('test').style.display = "flex";
+                        return;
+                    }
+                }
+            </script>
+        </div>    
+    </div>
+   
+    
+    
+
+
+</body>
+</html>
+
+
+
